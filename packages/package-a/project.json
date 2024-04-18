@@ -15,8 +15,14 @@
             ],
             "options": {
                 "commands": [
-                    "echo \"hi\" > .local.env",
-                    "echo \"wow\" >> .local.env"
+                    {
+                        "command": "echo \"THIS\" > .local.env",
+                        "forwardAllArgs": true
+                    },
+                    {
+                        "command": "echo \"DOES\" >> .local.env",
+                        "forwardAllArgs": true
+                    }
                 ],
                 "cwd": "{projectRoot}"
             },
@@ -43,7 +49,10 @@
             ],
             "options": {
                 "commands": [
-                    "echo \"hello\" >> .local.env"
+                    {
+                        "command": "echo \"WORK\" >> .local.env",
+                        "forwardAllArgs": false
+                    }
                 ],
                 "parallel": false,
                 "cwd": "{projectRoot}"
@@ -71,7 +80,10 @@
             ],
             "options": {
                 "commands": [
-                    "cat .local.env"
+                    {
+                        "command": "cat .local.env",
+                        "forwardAllArgs": true
+                    }
                 ],
                 "parallel": false,
                 "cwd": "{projectRoot}"
@@ -96,7 +108,10 @@
             ],
             "options": {
                 "commands": [
-                    "cat .local.env"
+                    {
+                        "command": "cat .local.env",
+                        "forwardAllArgs": true
+                    }
                 ],
                 "parallel": false,
                 "cwd": "{projectRoot}"
@@ -121,7 +136,10 @@
             ],
             "options": {
                 "commands": [
-                    "cat .local.env"
+                    {
+                        "command": "cat .local.env",
+                        "forwardAllArgs": true
+                    }
                 ],
                 "parallel": false,
                 "cwd": "{projectRoot}"
@@ -140,13 +158,16 @@
             ],
             "dependsOn": [
                 {
-                    "target": "cat-c",
+                    "target": "cat-c-0",
                     "params": "forward"
                 }
             ],
             "options": {
                 "commands": [
-                    "cat .local.env"
+                    {
+                        "command": "cat .local.env",
+                        "forwardAllArgs": true
+                    }
                 ],
                 "parallel": false,
                 "cwd": "{projectRoot}"
@@ -165,13 +186,16 @@
             ],
             "dependsOn": [
                 {
-                    "target": "cat-c",
+                    "target": "cat-c-1",
                     "params": "forward"
                 }
             ],
             "options": {
                 "commands": [
-                    "cat .local.env"
+                    {
+                        "command": "cat .local.env",
+                        "forwardAllArgs": true
+                    }
                 ],
                 "parallel": false,
                 "cwd": "{projectRoot}"
@@ -190,13 +214,16 @@
             ],
             "dependsOn": [
                 {
-                    "target": "cat-c",
+                    "target": "cat-c-2",
                     "params": "forward"
                 }
             ],
             "options": {
                 "commands": [
-                    "cat .local.env"
+                    {
+                        "command": "cat .local.env",
+                        "forwardAllArgs": true
+                    }
                 ],
                 "parallel": false,
                 "cwd": "{projectRoot}"
