@@ -17,11 +17,11 @@
                 "commands": [
                     {
                         "command": "echo \"THIS\" > .local.env",
-                        "forwardAllArgs": true
+                        "forwardAllArgs": false
                     },
                     {
                         "command": "echo \"DOES\" >> .local.env",
-                        "forwardAllArgs": true
+                        "forwardAllArgs": false
                     }
                 ],
                 "cwd": "{projectRoot}"
@@ -82,7 +82,7 @@
                 "commands": [
                     {
                         "command": "cat .local.env",
-                        "forwardAllArgs": true
+                        "forwardAllArgs": false
                     }
                 ],
                 "parallel": false,
@@ -110,7 +110,7 @@
                 "commands": [
                     {
                         "command": "cat .local.env",
-                        "forwardAllArgs": true
+                        "forwardAllArgs": false
                     }
                 ],
                 "parallel": false,
@@ -138,7 +138,7 @@
                 "commands": [
                     {
                         "command": "cat .local.env",
-                        "forwardAllArgs": true
+                        "forwardAllArgs": false
                     }
                 ],
                 "parallel": false,
@@ -166,7 +166,7 @@
                 "commands": [
                     {
                         "command": "cat .local.env",
-                        "forwardAllArgs": true
+                        "forwardAllArgs": false
                     }
                 ],
                 "parallel": false,
@@ -194,7 +194,7 @@
                 "commands": [
                     {
                         "command": "cat .local.env",
-                        "forwardAllArgs": true
+                        "forwardAllArgs": false
                     }
                 ],
                 "parallel": false,
@@ -222,7 +222,7 @@
                 "commands": [
                     {
                         "command": "cat .local.env",
-                        "forwardAllArgs": true
+                        "forwardAllArgs": false
                     }
                 ],
                 "parallel": false,

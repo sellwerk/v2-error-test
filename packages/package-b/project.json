@@ -53,7 +53,10 @@
             ],
             "options": {
                 "commands": [
-                    "echo wow"
+                    {
+                        "command": "echo wow",
+                        "forwardAllArgs": false
+                    }
                 ],
                 "cwd": "{projectRoot}"
             },
