@@ -229,6 +229,90 @@
                 "cwd": "{projectRoot}"
             },
             "cache": true
+        },
+        "cat-e-0": {
+            "executor": "nx:run-commands",
+            "inputs": [
+                "default",
+                "^production",
+                "sharedGlobals",
+                {
+                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                }
+            ],
+            "dependsOn": [
+                {
+                    "target": "cat-d-0",
+                    "params": "forward"
+                }
+            ],
+            "options": {
+                "commands": [
+                    {
+                        "command": "cat .local.env",
+                        "forwardAllArgs": false
+                    }
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            },
+            "cache": true
+        },
+        "cat-e-1": {
+            "executor": "nx:run-commands",
+            "inputs": [
+                "default",
+                "^production",
+                "sharedGlobals",
+                {
+                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                }
+            ],
+            "dependsOn": [
+                {
+                    "target": "cat-d-1",
+                    "params": "forward"
+                }
+            ],
+            "options": {
+                "commands": [
+                    {
+                        "command": "cat .local.env",
+                        "forwardAllArgs": false
+                    }
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            },
+            "cache": true
+        },
+        "cat-e-2": {
+            "executor": "nx:run-commands",
+            "inputs": [
+                "default",
+                "^production",
+                "sharedGlobals",
+                {
+                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                }
+            ],
+            "dependsOn": [
+                {
+                    "target": "cat-d-2",
+                    "params": "forward"
+                }
+            ],
+            "options": {
+                "commands": [
+                    {
+                        "command": "cat .local.env",
+                        "forwardAllArgs": false
+                    }
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            },
+            "cache": true
         }
     }
 }
