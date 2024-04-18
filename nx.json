@@ -1,0 +1,25 @@
+{
+  "extends": "nx/presets/npm.json",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "nxCloudAccessToken": "M2E1MDU1N2EtMzNkZC00ZTA1LWE2ZTQtYmM3OGMzMGJjMGI1fHJlYWQtd3JpdGU=",
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*"
+    ],
+    "production": [
+      "{projectRoot}/**/*"
+    ],
+    "sharedGlobals": [
+      {
+        "runtime": "node --version"
+      }
+    ]
+  },
+  "targetDefaults": {
+    "build": {},
+    "for-hash-generation": {},
+    "install": {}
+  },
+  "plugins": [],
+  "defaultBase": "main"
+}

@@ -1,0 +1,66 @@
+{
+    "name": "package-b",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "{projectRoot}",
+    "targets": {
+        "trigger-all": {
+            "executor": "nx:run-commands",
+            "dependsOn": [
+                {
+                    "projects": [
+                        "package-a"
+                    ],
+                    "target": "cat-c-0"
+                },
+                {
+                    "projects": [
+                        "package-a"
+                    ],
+                    "target": "cat-c-1"
+                },
+                {
+                    "projects": [
+                        "package-a"
+                    ],
+                    "target": "cat-c-2"
+                },
+                {
+                    "projects": [
+                        "package-a"
+                    ],
+                    "target": "cat-d-0"
+                },
+                {
+                    "projects": [
+                        "package-a"
+                    ],
+                    "target": "cat-d-1"
+                },
+                {
+                    "projects": [
+                        "package-a"
+                    ],
+                    "target": "cat-d-2"
+                }
+            ],
+            "inputs": [
+                "default",
+                "^production",
+                "sharedGlobals",
+                {
+                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                }
+            ],
+            "options": {
+                "commands": [
+                    "echo wow"
+                ],
+                "cwd": "{projectRoot}"
+            },
+            "cache": true,
+            "outputs": [
+                "{projectRoot}/.local.env"
+            ]
+        }
+    }
+}

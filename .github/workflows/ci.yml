@@ -1,0 +1,67 @@
+name: Staging
+
+# WORKFLOW TRIGGER
+on:
+  push:
+
+# CONCURRENCY
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  actions: read
+  contents: read
+
+# GLOBAL ENVIRONMENT VARIABLES
+env:
+  NODE_OPTIONS: --max-old-space-size=6144
+  NX_CLOUD_DISTRIBUTED_EXECUTION: true
+  NX_CLOUD_DTE_V2: true
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "yarn"
+      # Setup
+      - run: >
+          INPUT_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN}}
+          npx nx-cloud start-ci-run --with-env-vars="INPUT_GITHUB_TOKEN"
+      - run: yarn install --immutable
+      - uses: nrwl/nx-set-shas@v3
+        with:
+          main-branch-name: main
+      - run: git branch --track main origin/main
+      - run: >
+          INPUT_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN}} 
+          yarn nx run-many --targets=trigger-all --args="--bla=blub" --parallel 1
+      - name: Clean Agents
+        if: ${{ always() }}
+        run: npx nx-cloud stop-all-agents
+
+  agents:
+    runs-on: ubuntu-latest
+    name: Agent
+    timeout-minutes: 60
+    strategy:
+      matrix:
+        agent: [1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "yarn"
+      # Setup
+      - run: yarn install --immutable
+      - name: Start Nx Agent ${{ matrix.agent }}
+        run: INPUT_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN}} npx nx-cloud start-agent

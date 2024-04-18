@@ -1,0 +1,207 @@
+{
+    "name": "package-a",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "{projectRoot}",
+    "targets": {
+        "configure-a": {
+            "executor": "nx:run-commands",
+            "inputs": [
+                "default",
+                "^production",
+                "sharedGlobals",
+                {
+                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                }
+            ],
+            "options": {
+                "commands": [
+                    "echo \"hi\" > .local.env",
+                    "echo \"wow\" >> .local.env"
+                ],
+                "cwd": "{projectRoot}"
+            },
+            "cache": true,
+            "outputs": [
+                "{projectRoot}/.local.env"
+            ]
+        },
+        "configure-b": {
+            "executor": "nx:run-commands",
+            "inputs": [
+                "default",
+                "^production",
+                "sharedGlobals",
+                {
+                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                }
+            ],
+            "dependsOn": [
+                {
+                    "target": "configure-a",
+                    "params": "forward"
+                }
+            ],
+            "options": {
+                "commands": [
+                    "echo \"hello\" >> .local.env"
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            },
+            "cache": true,
+            "outputs": [
+                "{projectRoot}/.local.env"
+            ]
+        },
+        "cat-c-0": {
+            "executor": "nx:run-commands",
+            "inputs": [
+                "default",
+                "^production",
+                "sharedGlobals",
+                {
+                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                }
+            ],
+            "dependsOn": [
+                {
+                    "target": "configure-b",
+                    "params": "forward"
+                }
+            ],
+            "options": {
+                "commands": [
+                    "cat .local.env"
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            },
+            "cache": true
+        },
+        "cat-c-1": {
+            "executor": "nx:run-commands",
+            "inputs": [
+                "default",
+                "^production",
+                "sharedGlobals",
+                {
+                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                }
+            ],
+            "dependsOn": [
+                {
+                    "target": "configure-b",
+                    "params": "forward"
+                }
+            ],
+            "options": {
+                "commands": [
+                    "cat .local.env"
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            },
+            "cache": true
+        },
+        "cat-c-2": {
+            "executor": "nx:run-commands",
+            "inputs": [
+                "default",
+                "^production",
+                "sharedGlobals",
+                {
+                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                }
+            ],
+            "dependsOn": [
+                {
+                    "target": "configure-b",
+                    "params": "forward"
+                }
+            ],
+            "options": {
+                "commands": [
+                    "cat .local.env"
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            },
+            "cache": true
+        },
+        "cat-d-0": {
+            "executor": "nx:run-commands",
+            "inputs": [
+                "default",
+                "^production",
+                "sharedGlobals",
+                {
+                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                }
+            ],
+            "dependsOn": [
+                {
+                    "target": "cat-c",
+                    "params": "forward"
+                }
+            ],
+            "options": {
+                "commands": [
+                    "cat .local.env"
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            },
+            "cache": true
+        },
+        "cat-d-1": {
+            "executor": "nx:run-commands",
+            "inputs": [
+                "default",
+                "^production",
+                "sharedGlobals",
+                {
+                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                }
+            ],
+            "dependsOn": [
+                {
+                    "target": "cat-c",
+                    "params": "forward"
+                }
+            ],
+            "options": {
+                "commands": [
+                    "cat .local.env"
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            },
+            "cache": true
+        },
+        "cat-d-2": {
+            "executor": "nx:run-commands",
+            "inputs": [
+                "default",
+                "^production",
+                "sharedGlobals",
+                {
+                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                }
+            ],
+            "dependsOn": [
+                {
+                    "target": "cat-c",
+                    "params": "forward"
+                }
+            ],
+            "options": {
+                "commands": [
+                    "cat .local.env"
+                ],
+                "parallel": false,
+                "cwd": "{projectRoot}"
+            },
+            "cache": true
+        }
+    }
+}
