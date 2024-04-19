@@ -15,6 +15,7 @@
             ],
             "options": {
                 "commands": [
+                    "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}",
                     {"command": "echo \"This\" > .local.env", "forwardAllArgs": false},
                     {"command": "echo \"does\" >> .local.env", "forwardAllArgs": false}
                 ],
