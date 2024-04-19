@@ -15,8 +15,8 @@
             ],
             "options": {
                 "commands": [
-                    {"command": "echo \"hi\" > .local.env", "forwardAllArgs": false},
-                    {"command": "echo \"wow\" >> .local.env", "forwardAllArgs": false}
+                    {"command": "echo \"This\" > .local.env", "forwardAllArgs": false},
+                    {"command": "echo \"does\" >> .local.env", "forwardAllArgs": false}
                 ],
                 "cwd": "{projectRoot}",
                 "parallel": false,
@@ -44,7 +44,7 @@
             ],
             "options": {
                 "commands": [
-                    {"command": "echo \"hello\" >> .local.env", "forwardAllArgs": false}
+                    {"command": "echo \"work!\" >> .local.env", "forwardAllArgs": false}
                 ],
                 "parallel": false,
                 "cwd": "{projectRoot}"
