@@ -18,7 +18,8 @@
                     "echo \"hi\" > .local.env",
                     "echo \"wow\" >> .local.env"
                 ],
-                "cwd": "{projectRoot}"
+                "cwd": "{projectRoot}",
+                "parallel": false,
             },
             "cache": true,
             "outputs": [
