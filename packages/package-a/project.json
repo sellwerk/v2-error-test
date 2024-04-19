@@ -10,7 +10,10 @@
                 "^default",
                 "sharedGlobals",
                 {
-                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                    "env": "GITHUB_RUN_NUMBER"
+                },
+                {
+                    "env": "GITHUB_RUN_ATTEMPT"
                 }
             ],
             "options": {
@@ -34,7 +37,10 @@
                 "^default",
                 "sharedGlobals",
                 {
-                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                    "env": "GITHUB_RUN_NUMBER"
+                },
+                {
+                    "env": "GITHUB_RUN_ATTEMPT"
                 }
             ],
             "dependsOn": [
@@ -62,7 +68,10 @@
                 "^default",
                 "sharedGlobals",
                 {
-                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                    "env": "GITHUB_RUN_NUMBER"
+                },
+                {
+                    "env": "GITHUB_RUN_ATTEMPT"
                 }
             ],
             "dependsOn": [
@@ -88,7 +97,10 @@
                 "^default",
                 "sharedGlobals",
                 {
-                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                    "env": "GITHUB_RUN_NUMBER"
+                },
+                {
+                    "env": "GITHUB_RUN_ATTEMPT"
                 }
             ],
             "dependsOn": [
@@ -114,7 +126,10 @@
                 "^default",
                 "sharedGlobals",
                 {
-                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                    "env": "GITHUB_RUN_NUMBER"
+                },
+                {
+                    "env": "GITHUB_RUN_ATTEMPT"
                 }
             ],
             "dependsOn": [
@@ -140,7 +155,10 @@
                 "^default",
                 "sharedGlobals",
                 {
-                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                    "env": "GITHUB_RUN_NUMBER"
+                },
+                {
+                    "env": "GITHUB_RUN_ATTEMPT"
                 }
             ],
             "dependsOn": [
@@ -166,7 +184,10 @@
                 "^default",
                 "sharedGlobals",
                 {
-                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                    "env": "GITHUB_RUN_NUMBER"
+                },
+                {
+                    "env": "GITHUB_RUN_ATTEMPT"
                 }
             ],
             "dependsOn": [
@@ -192,7 +213,10 @@
                 "^default",
                 "sharedGlobals",
                 {
-                    "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
+                    "env": "GITHUB_RUN_NUMBER"
+                },
+                {
+                    "env": "GITHUB_RUN_ATTEMPT"
                 }
             ],
             "dependsOn": [
