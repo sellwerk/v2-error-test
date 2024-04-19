@@ -19,7 +19,7 @@
                     {"command": "echo \"does\" >> .local.env", "forwardAllArgs": false}
                 ],
                 "cwd": "{projectRoot}",
-                "parallel": false,
+                "parallel": false
             },
             "cache": true,
             "outputs": [
