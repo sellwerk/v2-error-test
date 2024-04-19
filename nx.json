@@ -6,19 +6,11 @@
     "default": [
       "{projectRoot}/**/*"
     ],
-    "production": [
-      "{projectRoot}/**/*"
-    ],
     "sharedGlobals": [
       {
         "runtime": "node --version"
       }
     ]
-  },
-  "targetDefaults": {
-    "build": {},
-    "for-hash-generation": {},
-    "install": {}
   },
   "plugins": [],
   "defaultBase": "main"

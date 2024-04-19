@@ -7,7 +7,7 @@
             "executor": "nx:run-commands",
             "inputs": [
                 "default",
-                "^production",
+                "^default",
                 "sharedGlobals",
                 {
                     "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
@@ -19,8 +19,8 @@
                     {"command": "echo \"This\" > .local.env", "forwardAllArgs": false},
                     {"command": "echo \"does\" >> .local.env", "forwardAllArgs": false}
                 ],
-                "cwd": "{projectRoot}",
-                "parallel": false
+                "parallel": false,
+                "cwd": "{projectRoot}"
             },
             "cache": true,
             "outputs": [
@@ -31,7 +31,7 @@
             "executor": "nx:run-commands",
             "inputs": [
                 "default",
-                "^production",
+                "^default",
                 "sharedGlobals",
                 {
                     "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
@@ -59,7 +59,7 @@
             "executor": "nx:run-commands",
             "inputs": [
                 "default",
-                "^production",
+                "^default",
                 "sharedGlobals",
                 {
                     "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
@@ -85,7 +85,7 @@
             "executor": "nx:run-commands",
             "inputs": [
                 "default",
-                "^production",
+                "^default",
                 "sharedGlobals",
                 {
                     "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
@@ -111,7 +111,7 @@
             "executor": "nx:run-commands",
             "inputs": [
                 "default",
-                "^production",
+                "^default",
                 "sharedGlobals",
                 {
                     "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
@@ -137,7 +137,7 @@
             "executor": "nx:run-commands",
             "inputs": [
                 "default",
-                "^production",
+                "^default",
                 "sharedGlobals",
                 {
                     "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
@@ -163,7 +163,7 @@
             "executor": "nx:run-commands",
             "inputs": [
                 "default",
-                "^production",
+                "^default",
                 "sharedGlobals",
                 {
                     "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
@@ -189,7 +189,7 @@
             "executor": "nx:run-commands",
             "inputs": [
                 "default",
-                "^production",
+                "^default",
                 "sharedGlobals",
                 {
                     "runtime": "echo ${GITHUB_RUN_NUMBER}_${GITHUB_RUN_ATTEMPT}"
