@@ -17,7 +17,7 @@ permissions:
 env:
   NODE_OPTIONS: --max-old-space-size=6144
   NX_CLOUD_DISTRIBUTED_EXECUTION: true
-  NX_CLOUD_DTE_V2: true
+  NX_CLOUD_DTE_V2: false
 
 jobs:
   main:
