@@ -163,7 +163,7 @@
             ],
             "dependsOn": [
                 {
-                    "target": "cat-c",
+                    "target": "cat-c-0",
                     "params": "forward"
                 }
             ],
@@ -192,7 +192,7 @@
             ],
             "dependsOn": [
                 {
-                    "target": "cat-c",
+                    "target": "cat-c-1",
                     "params": "forward"
                 }
             ],
@@ -221,7 +221,7 @@
             ],
             "dependsOn": [
                 {
-                    "target": "cat-c",
+                    "target": "cat-c-2",
                     "params": "forward"
                 }
             ],
