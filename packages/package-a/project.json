@@ -16,7 +16,7 @@
             "options": {
                 "commands": [
                     {"command": "echo \"hi\" > .local.env", "forwardAllArgs": false},
-                    {"comamnd": "echo \"wow\" >> .local.env", "forwardAllArgs": false}
+                    {"command": "echo \"wow\" >> .local.env", "forwardAllArgs": false}
                 ],
                 "cwd": "{projectRoot}",
                 "parallel": false,
