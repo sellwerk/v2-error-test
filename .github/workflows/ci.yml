@@ -13,7 +13,7 @@ permissions:
   actions: read
   contents: read
 
-# GLOBAL ENVIRONMENT VARIABLES
+# GLOBAL ENVIRONMENT VARIABLESS
 env:
   NODE_OPTIONS: --max-old-space-size=6144
   NX_CLOUD_DISTRIBUTED_EXECUTION: true
